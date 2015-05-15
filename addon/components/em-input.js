@@ -17,6 +17,7 @@ export default FormGroupComponent.extend({
     disabled: Ember.computed.alias('mainComponent.disabled'),
     type: Ember.computed.alias('mainComponent.type'),
     model: Ember.computed.alias('mainComponent.model'),
+    name: Em.computed.alias('parentView.elemName'),
     propertyName: Ember.computed.alias('mainComponent.propertyName')
   }),
   property: void 0,
@@ -25,6 +26,7 @@ export default FormGroupComponent.extend({
   required: void 0,
   autofocus: void 0,
   disabled: void 0,
+  elemName: void 0,
   controlWrapper: Ember.computed('form.formLayout', function() {
     if (this.get('form.formLayout') === 'horizontal') {
       return 'col-sm-10';
